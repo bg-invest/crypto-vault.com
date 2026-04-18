@@ -316,21 +316,18 @@ svg {
 }
 
 .status {
-  padding: 8px 16px;
-  border-radius: 20px;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
+  color: #666666; /* Dark ash color */
 }
 
 .status.pending {
-  background: #ffeb3b;
-  color: #333;
+  /* Removed background and padding */
 }
 
 .status.completed {
-  background: #4caf50;
-  color: white;
+  /* Removed background and padding */
 }
 
 /* Receive Page Styles */
