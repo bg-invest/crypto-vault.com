@@ -32,6 +32,7 @@ function logout() {
   window.location.href = "index.html";
 }
 
+// btc price and chart
 const btcPriceElement = document.getElementById("btc-price");
 const priceChartCanvas = document.getElementById("priceChart");
 let btcChart;
