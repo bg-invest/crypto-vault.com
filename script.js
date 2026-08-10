@@ -37,6 +37,7 @@ const btcPriceElement = document.getElementById("btc-price");
 const priceChartCanvas = document.getElementById("priceChart");
 let btcChart;
 
+//price: https://www.coingecko.com/api/documentations/v3#/simple/get_simple_price
 async function getBTCPrice() {
   try {
     const res = await fetch(
@@ -59,6 +60,7 @@ async function getBTCPrice() {
   }
 }
 
+// chart: https://www.coingecko.com/api/documentations/v3#/coins/get_coins__id__market_chart
 async function getBTCChartData() {
   try {
     const res = await fetch(

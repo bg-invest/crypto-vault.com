@@ -398,6 +398,70 @@ svg {
 }
 
 /*//monile screen */
+
+/* ===== SUCCESS MODAL ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  z-index: 9999;
+}
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-content {
+  background: #0f0f0f;
+  padding: 28px 36px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 260px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.modal-check {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.modal-content h2 {
+  color: #dffaf0;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* small entrance animation for the check */
+.modal.open .modal-content {
+  transform: translateY(-6px);
+  animation: pop 260ms ease forwards;
+}
+@keyframes pop {
+  from { transform: translateY(6px) scale(0.98); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.modal-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+.modal-ok-btn {
+  background: #1ec07a;
+  color: #062816;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.modal-ok-btn:focus {
+  outline: 2px solid rgba(30,192,122,0.25);
+}
 @media (max-width: 550px) {
   .navbar ul {
     display: flex;
